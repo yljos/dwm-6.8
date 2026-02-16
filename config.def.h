@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "Firefox", "Telegram", "Windows", "Kitty", "Steam", "Game", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -27,12 +27,14 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "firefox-esr",  NULL,    NULL,       1 << 0,       0,           -1 },
+        { "xfreerdp",  NULL,       NULL,       1 << 2,       0,           -1 },
+        { "steam",  NULL,       NULL,       1 << 4,       0,           -1 },
+        { "kitty",  NULL,       NULL,       1 << 3,       0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5;  /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
